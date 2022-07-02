@@ -1,11 +1,12 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import React from 'react'
+import ProjectSection from '../components/ProjectSection'
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <div className={styles.container}>
-      <p className="text-3xl font-bold underline">BLABLABLA</p>
+    <div>
+      <ProjectSection/>
     </div>
   )
 }
+
+export default HomePage
