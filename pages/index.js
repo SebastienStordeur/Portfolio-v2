@@ -1,21 +1,26 @@
 import { Fragment } from 'react'
 import Head from 'next/head';
-import { MongoClient } from 'mongodb';
+/* import { MongoClient } from 'mongodb'; */
 
 import HeroSection from '../components/Hero/HeroSection'
-import ProjectSection from '../components/ProjectSection'
+import Project from '../components/Projects/ProjectCard/Project';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
+
 
 const HomePage = () => {
   return (
     <Fragment>
       <Head>
-        <title></title>
-        <meta name="description" content="" />
+        <title>Portfolio</title>
+        <meta name="description" content="Description temporaire" />
       </Head>
+      <Header />
           <main className="bg-background">
         <HeroSection />
-        {/* <ProjectSection/> */}
+        <Project />
       </main>
+      <Footer />
     </Fragment>
   )
 }
@@ -24,7 +29,7 @@ export default HomePage
 
 
 
-export async function getStaticProps() {
+/* export async function getStaticProps() {
 
   const client = await MongoClient.connect('mongodb+srv://sebastien:<password>@cluster0.oos0jrw.mongodb.net/?retryWrites=true&w=majority');
   const db = client.db();
@@ -41,4 +46,4 @@ export async function getStaticProps() {
     }
   }
 
-}
+} */

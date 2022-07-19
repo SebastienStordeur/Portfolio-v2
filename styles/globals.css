@@ -23,3 +23,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer base {
+  :root {
+    --transparent-primary: rgba(244, 211, 94, 0.1);
+  }
+}
