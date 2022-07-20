@@ -5,14 +5,15 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      'default': ['Montserrat', 'sans-serif']
-    },
+
     extend: {
       fontSize: {
         h1: "clamp(32px, 8vw, 63px)",
         dynamic: "clamp(24px, 8vw, 32px)"
-      }
+      },
+      fontFamily: {
+        'Montserrat': ['Montserrat', 'sans-serif']
+      },
     },
     colors : {
       background: '#16212c',
