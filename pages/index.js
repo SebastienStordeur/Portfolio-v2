@@ -6,6 +6,7 @@ import HeroSection from '../components/Hero/HeroSection'
 import Project from '../components/Projects/ProjectCard/Project';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
+import { ProjectSection, AboutSection } from '../components';
 
 
 const HomePage = () => {
@@ -16,9 +17,10 @@ const HomePage = () => {
         <meta name="description" content="Description temporaire" />
       </Head>
       <Header />
-          <main className="bg-background">
+          <main className="bg-background max-w-[1240px] m-auto">
         <HeroSection />
-        <Project />
+        <AboutSection />
+        <ProjectSection />
       </main>
       <Footer />
     </Fragment>
