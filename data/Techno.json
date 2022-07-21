@@ -2,25 +2,25 @@
     {
         "id": 1,
         "name": "React",
-        "icon": "../assets/react-svgrepo-com.svg",
+        "icon": "/../assets/react-svgrepo-com.svg",
         "type": "Front"
     },
     {
         "id": 2,
         "name": "NextJs",
-        "icon": "../assets/next-js-svgrepo-com.svg",
+        "icon": "/../assets/next-js-svgrepo-com.svg",
         "type": "Front"
     },
     {
         "id": 3,
         "name": "Sass",
-        "icon": "../assets/sass-svgrepo-com.svg",
+        "icon": "/../assets/sass-svgrepo-com.svg",
         "type": "Front"
     },
     {
         "id": 4,
         "name": "Tailwind",
-        "icon": "../assets/tailwindcss-svgrepo-com.svg",
+        "icon": "/../assets/tailwindcss-svgrepo-com.svg",
         "type": "Front"
     },
     {

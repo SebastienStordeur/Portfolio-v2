@@ -20,8 +20,9 @@ module.exports = {
       primary: "#f4d35e",
       primarytransparent: "rgba(var(--transparent-primary) / <alpha-value>)",
       white: "#fff",
-      lightnavy: "#112240",
-      lightgray: "#a8b2d1"
+      lightbg: "#5F9EA0",
+      lightgray: "#a8b2d1",
+      beige: "#F5F5DC",
     }
   },
   plugins: [],

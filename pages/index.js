@@ -1,15 +1,15 @@
 import { Fragment } from 'react'
 import Head from 'next/head';
-/* import { MongoClient } from 'mongodb'; */
+import { MongoClient } from 'mongodb';
 
 import HeroSection from '../components/Hero/HeroSection'
-import Project from '../components/Projects/ProjectCard/Project';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
 import { ProjectSection, AboutSection } from '../components';
 
 
-const HomePage = () => {
+const HomePage = (props) => {
+  console.log(props)
   return (
     <Fragment>
       <Head>
@@ -20,7 +20,7 @@ const HomePage = () => {
           <main className="bg-background max-w-[1240px] m-auto">
         <HeroSection />
         <AboutSection />
-        <ProjectSection />
+        <ProjectSection projects={props.projects}/>
       </main>
       <Footer />
     </Fragment>
@@ -30,22 +30,27 @@ const HomePage = () => {
 export default HomePage
 
 
+export async function getStaticProps() {
 
-/* export async function getStaticProps() {
-
-  const client = await MongoClient.connect('mongodb+srv://sebastien:<password>@cluster0.oos0jrw.mongodb.net/?retryWrites=true&w=majority');
+  const client = await MongoClient.connect('mongodb+srv://sebastien:@cluster0.oos0jrw.mongodb.net/?retryWrites=true&w=majority');
   const db = client.db();
   const projectsCollection = db.collection('projects');
   const projects = await projectsCollection.find().toArray();
+  console.log(projects)
   client.close();
 
 
   return {
     props: {
-      projects: { //projects.map(project => ({}))
-
-      }
-    }
-  }
-
-} */
+        projects: projects.map(project => ({
+          title: project.data.title,
+          description: project.data.description,
+          github: project.data.github,
+          live: project.data.live,
+          technologies: project.data.technologies,
+          id: project._id.toString()
+        }))
+    },
+    revalidate: 1,
+  };
+}
