@@ -7,13 +7,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --transparent-primary: rgba(244, 211, 94, 0.1);
+  }
+}
 
-
-
-/* --navy-blue: #16212c;
---white: #ffffff;
---golden-yellow: #f4d35e;
---golden-yellow-transparent: rgba(244, 211, 94, 0.1); */
 html,
 body {
   padding: 0;
@@ -23,7 +22,6 @@ body {
   scroll-behavior: smooth;
   background: #16212c;
 }
-
 
 a {
   color: inherit;
@@ -35,11 +33,7 @@ a {
   font-family: 'Montserrat', sans-serif;
 }
 
-@layer base {
-  :root {
-    --transparent-primary: rgba(244, 211, 94, 0.1);
-  }
-}
+
 
 .navlink::after {
   content: "";
