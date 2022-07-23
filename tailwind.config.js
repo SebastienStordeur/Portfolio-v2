@@ -23,7 +23,10 @@ module.exports = {
       lightbg: "#5F9EA0",
       lightgray: "#a8b2d1",
       beige: "#F5F5DC",
+      test: "#96e8eb"
     }
   },
   plugins: [],
 }
+
+/* 96e8eb */

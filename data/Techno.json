@@ -8,7 +8,7 @@
     {
         "id": 2,
         "name": "NextJs",
-        "icon": "/../assets/next-js-svgrepo-com.svg",
+        "icon": "/../assets/next-js-seeklogo.com.svg",
         "type": "Front"
     },
     {
@@ -20,55 +20,55 @@
     {
         "id": 4,
         "name": "Tailwind",
-        "icon": "/../assets/tailwindcss-svgrepo-com.svg",
+        "icon": "/../assets/tailwindcss-icon-svgrepo-com.svg",
         "type": "Front"
     },
     {
         "id": 10,
         "name": "NodeJs",
-        "icon": "../assets/node-svgrepo-com.svg",
+        "icon": "/../assets/node-svgrepo-com.svg",
         "type": "Back"
     },
     {
         "id": 11,
         "name": "Express",
-        "icon": "../assets/sass-svgrepo-com.svg",
+        "icon": "/../assets/expressjs-icon.svg",
         "type": "Back"
     },
     {
         "id": 12,
         "name": "Prisma",
-        "icon": "../assets/light-prisma-svgrepo-com.svg",
+        "icon": "/../assets/light-prisma-svgrepo-com.svg",
         "type": "Back"
     },
     {
         "id": 20,
         "name": "MongoDB",
-        "icon": "../assets/mongodb-svgrepo-com.svg",
+        "icon": "/../assets/mongodb-svgrepo-com.svg",
         "type": "Database"
     },
     {
         "id": 30,
         "name": "Figma",
-        "icon": "../assets/figma-svgrepo-com.svg",
+        "icon": "/../assets/figma-svgrepo-com.svg",
         "type": "Other"
     },
     {
         "id": 31,
         "name": "Jest",
-        "icon": "../assets/jest-svgrepo-com.svg",
+        "icon": "/../assets/jest-svgrepo-com.svg",
         "type": "Other"
     },
     {
         "id": 32,
         "name": "Typescript",
-        "icon": "../assets/typescript-svgrepo-com.svg",
+        "icon": "/../assets/typescript-svgrepo-com.svg",
         "type": "Other"
     },
     {
         "id": 33,
         "name": "Git",
-        "icon": "../assets/git-svgrepo-com.svg",
+        "icon": "/../assets/git-svgrepo-com.svg",
         "type": "Other"
     }
     

@@ -13,9 +13,11 @@ console.log(props)
                     return <ProjectCard key={project.title} project={project} />
                 })}
             </div> */}
+            <div className='grid'>
             {props.projects.map(project => {
                 return <Project project={project} key={project.id} />
             }) }
+            </div>
 
         </section>
     )

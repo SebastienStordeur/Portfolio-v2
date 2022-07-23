@@ -32,7 +32,7 @@ export default HomePage
 
 export async function getStaticProps() {
 
-  const client = await MongoClient.connect('mongodb+srv://sebastien:@cluster0.oos0jrw.mongodb.net/?retryWrites=true&w=majority');
+  const client = await MongoClient.connect('mongodb+srv://sebastien:NgAJkzOpCoRriZ9j@cluster0.oos0jrw.mongodb.net/?retryWrites=true&w=majority');
   const db = client.db();
   const projectsCollection = db.collection('projects');
   const projects = await projectsCollection.find().toArray();
