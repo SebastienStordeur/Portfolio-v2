@@ -18,15 +18,9 @@ module.exports = {
     colors : {
       background: '#16212c',
       primary: "#f4d35e",
-      primarytransparent: "rgba(var(--transparent-primary) / <alpha-value>)",
       white: "#fff",
-      lightbg: "#5F9EA0",
-      lightgray: "#a8b2d1",
-      beige: "#F5F5DC",
-      test: "#96e8eb"
+      test: '#25353E'
     }
   },
   plugins: [],
 }
-
-/* 96e8eb */

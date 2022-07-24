@@ -3,43 +3,43 @@
         "id": 1,
         "name": "React",
         "icon": "/../assets/react-svgrepo-com.svg",
-        "type": "Front"
+        "type": "Front-end"
     },
     {
         "id": 2,
         "name": "NextJs",
-        "icon": "/../assets/next-js-seeklogo.com.svg",
-        "type": "Front"
+        "icon": "/../assets/free_icon_1.svg",
+        "type": "Front-end"
     },
     {
         "id": 3,
         "name": "Sass",
         "icon": "/../assets/sass-svgrepo-com.svg",
-        "type": "Front"
+        "type": "Front-end"
     },
     {
         "id": 4,
         "name": "Tailwind",
         "icon": "/../assets/tailwindcss-icon-svgrepo-com.svg",
-        "type": "Front"
+        "type": "Front-end"
     },
     {
         "id": 10,
         "name": "NodeJs",
         "icon": "/../assets/node-svgrepo-com.svg",
-        "type": "Back"
+        "type": "Back-end"
     },
     {
         "id": 11,
         "name": "Express",
         "icon": "/../assets/expressjs-icon.svg",
-        "type": "Back"
+        "type": "Back-end"
     },
     {
         "id": 12,
         "name": "Prisma",
         "icon": "/../assets/light-prisma-svgrepo-com.svg",
-        "type": "Back"
+        "type": "Back-end"
     },
     {
         "id": 20,
@@ -51,25 +51,25 @@
         "id": 30,
         "name": "Figma",
         "icon": "/../assets/figma-svgrepo-com.svg",
-        "type": "Other"
+        "type": "Autres"
     },
     {
         "id": 31,
         "name": "Jest",
         "icon": "/../assets/jest-svgrepo-com.svg",
-        "type": "Other"
+        "type": "Autres"
     },
     {
         "id": 32,
         "name": "Typescript",
         "icon": "/../assets/typescript-svgrepo-com.svg",
-        "type": "Other"
+        "type": "Autres"
     },
     {
         "id": 33,
         "name": "Git",
         "icon": "/../assets/git-svgrepo-com.svg",
-        "type": "Other"
+        "type": "Autres"
     }
     
 ]

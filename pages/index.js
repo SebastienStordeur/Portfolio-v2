@@ -5,7 +5,7 @@ import { MongoClient } from 'mongodb';
 import HeroSection from '../components/Hero/HeroSection'
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
-import { ProjectSection, AboutSection } from '../components';
+import { ProjectSection, AboutSection, ContactSection } from '../components';
 
 
 const HomePage = (props) => {
@@ -21,6 +21,7 @@ const HomePage = (props) => {
         <HeroSection />
         <AboutSection />
         <ProjectSection projects={props.projects}/>
+        <ContactSection />
       </main>
       <Footer />
     </Fragment>
@@ -31,14 +32,11 @@ export default HomePage
 
 
 export async function getStaticProps() {
-
   const client = await MongoClient.connect('mongodb+srv://sebastien:NgAJkzOpCoRriZ9j@cluster0.oos0jrw.mongodb.net/?retryWrites=true&w=majority');
   const db = client.db();
   const projectsCollection = db.collection('projects');
   const projects = await projectsCollection.find().toArray();
-  console.log(projects)
   client.close();
-
 
   return {
     props: {

@@ -9,13 +9,19 @@ import React from 'react'
 const Navbar = ({ isOpen, setIsOpen, navLinks }) => {
   return (
     <div className="flex items-center justify-between p-4 bg-background max-w-[1240px] m-auto">
-        <div className="flex items-center">
+        <div className="flex items-center text-white">
             Logo
         </div>
-        <nav className="hidden md:block space-x-6 text-white font-default">
+        <nav className="block hidden md:block space-x-6 text-white font-default">
             {navLinks}
         </nav>
-        <button type="button" aria-label="Toggle mobile menu" onClick={() => setIsOpen(!isOpen)} className="rounded md:hidden focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50"><MenuAlt4Svg isOpen={isOpen} /></button>
+        <button 
+          type="button" 
+          aria-label="Toggle mobile menu" 
+          onClick={() => setIsOpen(!isOpen)} 
+          className="rounded md:hidden focus:outline-none focus:ring focus:ring-gray-500 focus:ring-opacity-50">
+          <MenuAlt4Svg isOpen={isOpen} />
+        </button>
     </div>
   )
 }

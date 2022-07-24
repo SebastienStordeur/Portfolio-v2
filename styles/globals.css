@@ -9,7 +9,7 @@
 
 @layer base {
   :root {
-    --transparent-primary: rgba(244, 211, 94, 0.1);
+    --transparent-primary: #f4d35e;
   }
 }
 
