@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,10 +23,8 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
-
-
 
 .navlink::after {
   content: "";
@@ -41,6 +38,21 @@ a {
   transition: width 0.5s ease, background-color 0.5s ease, left 0.5s ease;
 }
 
+button:disabled {
+  background-color: #555;
+  color: #f1f1f1;
+  border: 1px solid #f1f1f1;
+  cursor: not-allowed;
+}
+
+.invalid {
+  border: 1px solid #b40e0e;
+  background: #fddddd;
+}
+.invalid:focus {
+  border-color: #ff8800;
+  background-color: #fbe8d2;
+}
 
 /****SCROLLBAR****/
 /* width */

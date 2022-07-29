@@ -5,22 +5,22 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
     extend: {
       fontSize: {
         h1: "clamp(32px, 8vw, 63px)",
-        dynamic: "clamp(24px, 8vw, 32px)"
+        dynamic: "clamp(24px, 8vw, 32px)",
       },
       fontFamily: {
-        'Montserrat': ['Montserrat', 'sans-serif']
+        Montserrat: ["Montserrat", "sans-serif"],
       },
     },
-    colors : {
-      background: '#16212c',
+    colors: {
+      background: "#16212c",
       primary: "#f4d35e",
       white: "#fff",
-      test: '#25353E'
-    }
+      darkgray: "#25353E",
+      rederror: "#F52826",
+    },
   },
   plugins: [],
-}
+};

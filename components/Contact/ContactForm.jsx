@@ -13,6 +13,7 @@ const isValidName = (value) =>
   letterRegex.test(value) && isNotEmpty && value.length >= 3;
 const isValidEmail = (value) =>
   emailRegex.test(value) && isNotEmpty && value.length >= 6;
+const isNotLongEnough = (value) => value.length >= 50;
 
 const ContactForm = () => {
   const formRef = useRef();
@@ -25,7 +26,6 @@ const ContactForm = () => {
     inputBlurHandler: nameBlurHandler,
     reset: resetNameInput,
   } = useInput(isValidName);
-
   const {
     value: enteredEmail,
     isValid: enteredEmailIsValid,
@@ -34,10 +34,18 @@ const ContactForm = () => {
     inputBlurHandler: emailBlurHandler,
     reset: resetEmailInput,
   } = useInput(isValidEmail);
+  const {
+    value: enteredMessage,
+    isValid: enteredMessageIsValid,
+    hasError: messageInputHasError,
+    valueChangeHandler: messageChangeHandler,
+    inputBlurHandler: messageBlurHandler,
+    reset: resetMessageInput,
+  } = useInput(isNotLongEnough);
 
   let formIsValid = false;
 
-  if (enteredNameIsValid) {
+  if (enteredNameIsValid && enteredEmailIsValid && enteredMessageIsValid) {
     formIsValid = true;
   }
 
@@ -47,10 +55,10 @@ const ContactForm = () => {
 
     emailjs
       .sendForm(
-        process.env.EMAIL_SERVICE_ID,
-        process.env.TEMPLATE_ID,
+        process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         formRef.current,
-        process.env.PUBLIC_KEY
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -63,10 +71,12 @@ const ContactForm = () => {
 
     resetNameInput();
     resetEmailInput();
+    resetMessageInput();
   };
 
   return (
     <form
+      id="contact-form"
       ref={formRef}
       className="w-11/12 m-auto min-w-[300px]"
       onSubmit={submitFormHandler}
@@ -77,7 +87,7 @@ const ContactForm = () => {
         </label>
         <input
           type="text"
-          className="h-14 pl-3 rounded-lg shadow-lg"
+          className="h-14 pl-3 rounded-lg shadow-lg outline-0"
           name="fullname"
           placeholder="Votre nom complet"
           onChange={nameChangeHandler}
@@ -85,8 +95,8 @@ const ContactForm = () => {
           value={enteredName}
         />
         {nameInputHasError && (
-          <p className="text-[#ff0000] font-bold">
-            Ce champ ne peut pas être vide
+          <p className="text-[#CF6679] font-bold">
+            Veuillez renseigner un nom valide.
           </p>
         )}
       </div>
@@ -96,7 +106,7 @@ const ContactForm = () => {
         </label>
         <input
           type="email"
-          className="h-14 pl-3 rounded-lg"
+          className="h-14 pl-3 rounded-lg outline-0"
           name="email"
           placeholder="exemple@mail.fr"
           onChange={emailChangeHandler}
@@ -104,7 +114,7 @@ const ContactForm = () => {
           value={enteredEmail}
         />
         {emailInputHasError && (
-          <p className="text-primary font-semibold">
+          <p className="text-[#CF6679] font-bold">
             Veuillez renseigner une adresse email valide.
           </p>
         )}
@@ -114,10 +124,18 @@ const ContactForm = () => {
           Message
         </label>
         <textarea
-          className="resize-none h-[300px] rounded-lg p-4"
+          className="resize-none h-[300px] rounded-lg p-4 outline-0"
           name="message"
           placeholder="Votre message"
+          onChange={messageChangeHandler}
+          onBlur={messageBlurHandler}
+          value={enteredMessage}
         />
+        {messageInputHasError && (
+          <p className="text-rederror font-bold">
+            Le message doit contenir au moins 50 caractères.
+          </p>
+        )}
       </div>
       <Button type="submit" disabled={!formIsValid}>
         Envoyer
