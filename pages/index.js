@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Head from 'next/head';
 import { MongoClient } from 'mongodb';
 
@@ -9,27 +8,25 @@ import { ProjectSection, AboutSection, ContactSection } from '../components';
 
 
 const HomePage = (props) => {
-  console.log(props)
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Portfolio</title>
         <meta name="description" content="Description temporaire" />
       </Head>
       <Header />
-          <main className="bg-background max-w-[1240px] m-auto">
+      <main className="bg-background max-w-[1240px] m-auto">
         <HeroSection />
         <AboutSection />
         <ProjectSection projects={props.projects}/>
         <ContactSection />
       </main>
       <Footer />
-    </Fragment>
+    </>
   )
 }
 
 export default HomePage
-
 
 export async function getStaticProps() {
   const client = await MongoClient.connect('mongodb+srv://sebastien:NgAJkzOpCoRriZ9j@cluster0.oos0jrw.mongodb.net/?retryWrites=true&w=majority');

@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Card from '../../UI/Card'
 
 const Project = (props) => {
-    console.log(props.project)
   return (
     <Card>
         <header className='flex items-center justify-between'>

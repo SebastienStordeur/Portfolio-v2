@@ -7,12 +7,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --transparent-primary: #f4d35e;
-  }
-}
-
 html,
 body {
   padding: 0;

@@ -1,9 +1,12 @@
-import React from 'react'
+import Head from 'next/head';
 
-const index = () => {
+const ProjectsPage = () => {
   return (
-    <div>index</div>
+    <Head>
+      <title>Portfolio</title>
+      <meta name="description" content="Description temporaire" />
+    </Head>
   )
 }
 
-export default index
+export default ProjectsPage;

@@ -1,13 +1,7 @@
-import React from 'react'
+
 import Image from 'next/image'
 
-
-import Technos from '../../data/Techno.json';
-
 const Stack = (props) => {
-  console.log('tech', props.technos)
-
-
   return (
     <div className='mt-8 w-full'>
       <div className='flex justify-center'>
